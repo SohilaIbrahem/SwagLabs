@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [SwagLabs-Project]" guice-stage="DEVELOPMENT">
+  <parameter name="browser" value=""/>
+  <test thread-count="5" name="Validate that user can add items to cart(failed)">
+    <parameter name="browser" value=""/>
+    <classes>
+      <class name="testCases.TC02_AddToCartTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setupChromeDriver"/>
+          <include name="addItemsToCart"/>
+        </methods>
+      </class> <!-- testCases.TC02_AddToCartTest -->
+    </classes>
+  </test> <!-- Validate that user can add items to cart(failed) -->
+</suite> <!-- Failed suite [SwagLabs-Project] -->
