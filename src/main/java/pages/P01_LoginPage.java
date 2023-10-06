@@ -8,19 +8,19 @@ public class P01_LoginPage {
     private WebDriver driver;
 
     //Constructor
-    public P01_LoginPage(WebDriver driver)
-    {
+    public P01_LoginPage(WebDriver driver) {
         this.driver = driver;
     }
 
     //TODO: define locator using By
-    private final By USERNAME  = By.id("user-name");
-    private final By PASSWORD  =By.id("password");
+    private final By USERNAME = By.id("user-name");
+    private final By PASSWORD = By.id("password");
 
-    private final By LOGIN  =By.id("login-button");
+    private final By LOGIN = By.id("login-button");
+
     //TODO: add action method
     public P01_LoginPage UserAddUSERNAME(String username) {
-      driver.findElement(this.USERNAME).sendKeys(username);
+        driver.findElement(this.USERNAME).sendKeys(username);
         return this;
     }
 

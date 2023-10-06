@@ -2,16 +2,15 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [SwagLabs-Project]" guice-stage="DEVELOPMENT">
   <parameter name="browser" value=""/>
-  <test thread-count="5" name="Validate that user can add items to cart(failed)">
+  <test thread-count="5" name="Check login page with valid data(failed)">
     <parameter name="browser" value=""/>
     <classes>
-      <class name="testCases.TC02_AddToCartTest">
+      <class name="testCases.TC04_CheckoutOrderOverviewTest">
         <methods>
-          <include name="tearDown"/>
           <include name="setupChromeDriver"/>
-          <include name="addItemsToCart"/>
+          <include name="checkAddProductstoCard"/>
         </methods>
-      </class> <!-- testCases.TC02_AddToCartTest -->
+      </class> <!-- testCases.TC04_CheckoutOrderOverviewTest -->
     </classes>
-  </test> <!-- Validate that user can add items to cart(failed) -->
+  </test> <!-- Check login page with valid data(failed) -->
 </suite> <!-- Failed suite [SwagLabs-Project] -->

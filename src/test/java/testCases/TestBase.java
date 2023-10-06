@@ -34,12 +34,12 @@ public class TestBase {
 
 
 
-    @AfterTest
+    /*@AfterTest
     public void tearDown ()
     {
 
         driver.quit();
-    }
+    }*/
 }
 
 

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SwagLabs-Project">
+
+    <parameter name="browser" value=""/>
+
+    <test name="Check login page with valid data">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+
+            <class name="testCases.TC01_LoginTest">
+
+                <methods>
+                    <include name="LoginTestWithValidData_P"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test name="check login with Invalid username and password">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+
+            <class name="testCases.TC01_LoginTest">
+
+                <methods>
+                    <include name="LoginTestWithInvalidUsername_N"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test name="check login with valid username and Invalid password">
+        <parameter name="browser" value=""/>
+        <classes>
+
+            <class name="testCases.TC01_LoginTest">
+
+                <methods>
+                    <include name="LoginTestWithInvalidPassword_N"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test name="check login with Invalid username and Invalid password">
+        <parameter name="browser" value=""/>
+        <classes>
+
+            <class name="testCases.TC01_LoginTest">
+
+                <methods>
+                    <include name="LoginTestWithInvalidUsernameAndInvalidPassword_N"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+<!--    <test name="Validate that user can add items to cart">-->
+<!--        <parameter name="browser" value=""/>-->
+<!--        <classes>-->
+<!--            <class name="testCases.TC02_AddToCartTest">-->
+<!--                <methods>-->
+<!--                    <include name="addItemsToCart"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+
+<!--    <test name="Check Out">-->
+<!--        <parameter name="browser" value=""/>-->
+<!--        <classes>-->
+<!--            <class name="testCases.TC03_CheckoutTest">-->
+<!--                <methods>-->
+<!--                    <include name="Checkout"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+
+
+
+</suite>

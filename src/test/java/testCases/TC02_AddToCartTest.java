@@ -8,15 +8,12 @@ import utilities.utlity;
 public class TC02_AddToCartTest extends TestBase{
 
     @Test
-    public void addItemsToCart()
-    {
+    public void addItemsToCart() throws InterruptedException {
        // private String username ="standard_user";
        // private String password = "secret_sauce";
 
         new P01_LoginPage(driver).UserAddUSERNAME("standard_user").UserAddPASSWORD("secret_sauce").UserClickOnLOGIN();
-        new P02_AddToCart(driver).UserClickOnAddItem_1().UserClickOnAddItem_2().
-                UserClickOnAddItem_3().UserClickOnAddItem_4().UserClickOnAddItem_5().
-                UserClickOnAddItem_6().UserClickOntCart();
+        new P02_AddToCart(driver).addProductsToCard(3).UserClickOnCartBtton();
         //TODO : capture screenshot
         utlity.captureScreenshot(driver,"addToCart");
 

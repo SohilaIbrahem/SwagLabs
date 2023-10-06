@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="SwagLabs-Project">
+<suite name="SwagLabs-Project"  parallel="tests" thread-count="1">
+<!--
+    <parameter name="browser" value=""/>
+-->
+    <suite-files>
+        <suite-file path="positivescenarios.xml"/>
+    </suite-files>
 
+
+<!--
     <parameter name="browser" value=""/>
 
     <test name="Check login page with valid data">
@@ -15,7 +23,7 @@
                 </methods>
             </class>
         </classes>
-    </test>
+    </test>-->
 
 <!--
 
@@ -62,18 +70,30 @@
 -->
 
 
-    <test name="Validate that user can add items to cart">
-        <parameter name="browser" value=""/>
-        <classes>
+<!--    <test name="Validate that user can add items to cart">-->
+<!--        <parameter name="browser" value=""/>-->
+<!--        <classes>-->
+<!--            <class name="testCases.TC02_AddToCartTest">-->
+<!--                <methods>-->
+<!--                    <include name="addItemsToCart"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-            <class name="testCases.TC02_AddToCartTest">
 
-                <methods>
-                    <include name="addItemsToCart"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
+<!--    <test name="Check Out">-->
+<!--        <parameter name="browser" value=""/>-->
+<!--        <classes>-->
+<!--            <class name="testCases.TC03_CheckoutTest">-->
+<!--                <methods>-->
+<!--                    <include name="Checkout"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+
 
 
 </suite>

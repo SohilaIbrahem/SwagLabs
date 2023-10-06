@@ -14,23 +14,20 @@ public class P03_CheckOut {
     }
     public void scrollToBottom()
     {
+
         javascriptExecutor.executeScript("scrollBy(0,2500)");
     }
 
 
-   private final By checkout = By.xpath("//a[@class='btn_action checkout_button']");
+
    private final By firstName = By.xpath("//input[@id=\"first-name\"]");
     private final By lastName =By.xpath("//input[@id=\"last-name\"]");
    private final By postalCode = By.xpath("//input[@id=\"postal-code\"]");
    private final By ContinueButton = By.xpath("//input[@class=\"btn_primary cart_button\"]");
+   private final By assertion = By.xpath("//div[@class=\"subheader\"]");
    private final By totalItems = By.xpath("//*[@id=\"checkout_summary_container\"]/div/div[2]/div[5]/text()[2]");
 
 
-
-    public P03_CheckOut UserClickOnCheckout() {
-        driver.findElement(this.checkout).click();
-        return this;
-    }
 
     public P03_CheckOut UerEnterFirstName(String FName) {
         driver.findElement(this.firstName).sendKeys(FName);
@@ -52,9 +49,15 @@ public class P03_CheckOut {
         return this;
     }
 
+
+    public Boolean Assertion()
+    {
+        return  driver.findElement(this.assertion).getText().equals("Checkout: Overview");
+    }
+
      public double total(double totalItem)
      {
-         return ;
+         return totalItem;
      }
     public double calculateTotalItems() {
         String totalItemsText = driver.findElement(this.totalItems).getText().trim();
