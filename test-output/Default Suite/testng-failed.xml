@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="SwagLabs-Project(failed)">
     <classes>
-      <class name="testCases.TC01_LoginTest">
+      <class name="testCases.TC05_ConfirmOrderTest">
         <methods>
-          <include name="LoginTestWithValidData_P"/>
+          <include name="ConfirmationOrder"/>
           <include name="setupChromeDriver"/>
         </methods>
-      </class> <!-- testCases.TC01_LoginTest -->
+      </class> <!-- testCases.TC05_ConfirmOrderTest -->
     </classes>
   </test> <!-- SwagLabs-Project(failed) -->
 </suite> <!-- Failed suite [Default Suite] -->

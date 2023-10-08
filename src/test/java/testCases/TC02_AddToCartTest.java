@@ -9,15 +9,12 @@ public class TC02_AddToCartTest extends TestBase{
 
     @Test
     public void addItemsToCart() throws InterruptedException {
-       // private String username ="standard_user";
-       // private String password = "secret_sauce";
 
         new P01_LoginPage(driver).UserAddUSERNAME("standard_user").UserAddPASSWORD("secret_sauce").UserClickOnLOGIN();
-        new P02_AddToCart(driver).addProductsToCard(3).UserClickOnCartBtton();
+        new P02_AddToCart(driver).addProductsToCard(3).UserClickOnCartBtton().getClickOnCheckout();
         //TODO : capture screenshot
         utlity.captureScreenshot(driver,"addToCart");
 
     }
-
 
 }

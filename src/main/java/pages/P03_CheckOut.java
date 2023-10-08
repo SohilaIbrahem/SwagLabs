@@ -10,15 +10,11 @@ public class P03_CheckOut {
     public P03_CheckOut(WebDriver driver)
     {
         this.driver=driver;
-        this.javascriptExecutor = (JavascriptExecutor) driver;
     }
     public void scrollToBottom()
     {
-
         javascriptExecutor.executeScript("scrollBy(0,2500)");
     }
-
-
 
    private final By firstName = By.xpath("//input[@id=\"first-name\"]");
     private final By lastName =By.xpath("//input[@id=\"last-name\"]");

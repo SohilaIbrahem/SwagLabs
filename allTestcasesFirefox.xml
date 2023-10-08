@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SwagLabs-Project">
+
+    <parameter name="browser" value="firefox"/>
+
+    <test name="Check login page with valid data">
+        <parameter name="browser" value=""/>
+        <classes>
+
+            <class name="testCases.TC01_LoginTest">
+
+                <methods>
+                    <include name="LoginTestWithValidData_P"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="User can add products to shopping cart">
+        <parameter name="browser" value=""/>
+        <classes>
+
+            <class name="testCases.TC02_AddToCartTest">
+
+                <methods>
+                    <include name="addItemsToCart"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Checkout">
+        <parameter name="browser" value=""/>
+        <classes>
+
+            <class name="testCases.TC03_CheckoutInformationTest">
+
+                <methods>
+                    <include name="checkoutTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Checkout order information">
+        <parameter name="browser" value=""/>
+        <classes>
+            <class name="testCases.TC03_CheckoutInformationTest">
+                <methods>
+                    <include name="checkoutInformationTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Checkout order overview">
+        <parameter name="browser" value=""/>
+        <classes>
+            <class name="testCases.TC04_CheckoutOrderOverviewTest">
+                <methods>
+                    <include name="checkOrderOverview"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Confirmation to create success order">
+        <parameter name="browser" value=""/>
+        <classes>
+            <class name="testCases.TC05_ConfirmOrderTest">
+                <methods>
+                    <include name="ConfirmationOrder"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+</suite>

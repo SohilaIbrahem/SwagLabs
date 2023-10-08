@@ -13,30 +13,40 @@ public class P05_ConfirmOrder {
     }
 
     private final By subTotal = By.xpath("//div[@class='summary_subtotal_label']");
-    private final By tax = By.xpath("/html/body/div/div[2]/div[3]/div/div[2]/div[6]/text()[2]");
-    private final By TotalItems = By.xpath("/html/body/div/div[2]/div[3]/div/div[2]/div[7]/text()[2]");
+    private final By tax = By.xpath("//div[@class='summary_tax_label']");
+    private final By total = By.xpath("//div[@class='summary_total_label']");
     private final By finishButton = By.xpath("//a[@class='btn_action cart_button']");
     private final By confirmationMessage = By.xpath("//h2[@class='complete-header']");
 
-    public boolean CheckSubTotalItems() {
-
-        return driver.findElement(this.subTotal).getText().equals("129.94");
-    }
-
-    public boolean Checktax() {
-        return driver.findElement(this.tax).getText().equals("10.40");
-    }
-
-    public boolean CheckTotalItems() {
-
-        return driver.findElement(this.TotalItems).getText().equals("140.34");
-    }
-
-    public P05_ConfirmOrder UserClickOnFinishButton() {
+    //ToDo: add action methods
+    public P05_ConfirmOrder UserclickOnFinishButton() {
         driver.findElement(this.finishButton).click();
         return this;
     }
+
+    public double getSubTotal() {
+        return Double.parseDouble(driver.findElement(this.subTotal).getText().replace("Item total: $", ""));
+    }
+
+    public double getTax() {
+        return Double.parseDouble(driver.findElement(this.tax).getText().replace("Tax: $", ""));
+    }
+
+    public float total() {
+        return Float.parseFloat(driver.findElement(this.total).getText().replace("Total: $", ""));
+    }
+
     public boolean confirmationMessage() {
         return driver.findElement(this.confirmationMessage).getText().equals("THANK YOU FOR YOUR ORDER");
+    }
+
+    public float calculateSubTotalPlusTax() {
+        double subtotal = getSubTotal();
+        System.out.println("subtotal value: " + subtotal);
+        double taxValue = getTax();
+        System.out.println("Tax value: " + taxValue);
+        float totalPrice= (float) (subtotal + taxValue);
+        System.out.println("Total value: " + totalPrice);
+        return totalPrice;
     }
 }

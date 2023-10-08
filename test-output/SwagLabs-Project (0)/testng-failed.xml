@@ -2,15 +2,15 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [SwagLabs-Project (0)]" guice-stage="DEVELOPMENT">
   <parameter name="browser" value=""/>
-  <test thread-count="5" name="check login with Invalid username and password(failed)">
-    <parameter name="browser" value="firefox"/>
+  <test thread-count="5" name="Confirmation to create success order(failed)">
+    <parameter name="browser" value=""/>
     <classes>
-      <class name="testCases.TC01_LoginTest">
+      <class name="testCases.TC05_ConfirmOrderTest">
         <methods>
+          <include name="ConfirmationOrder"/>
           <include name="setupChromeDriver"/>
-          <include name="LoginTestWithInvalidUsername_N"/>
         </methods>
-      </class> <!-- testCases.TC01_LoginTest -->
+      </class> <!-- testCases.TC05_ConfirmOrderTest -->
     </classes>
-  </test> <!-- check login with Invalid username and password(failed) -->
+  </test> <!-- Confirmation to create success order(failed) -->
 </suite> <!-- Failed suite [SwagLabs-Project (0)] -->

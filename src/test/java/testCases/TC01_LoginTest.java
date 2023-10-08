@@ -17,7 +17,7 @@ public class TC01_LoginTest extends TestBase {
     private String password = utlity.getData(System.getProperty("user.dir")+"/src/test/resources/testData/loginData.json","password");
 */
     //TODO: define read test data From Excel file
-  static String username = utlity.getExcelData(1,0,"Sheet1");
+    static String username = utlity.getExcelData(1,0,"Sheet1");
     static String password = utlity.getExcelData(1,1,"Sheet1");
 
     //TODO: positive testcases check login with valid username and password
