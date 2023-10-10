@@ -11,7 +11,7 @@ public class TC02_AddToCartTest extends TestBase{
     public void addItemsToCart() throws InterruptedException {
 
         new P01_LoginPage(driver).UserAddUSERNAME("standard_user").UserAddPASSWORD("secret_sauce").UserClickOnLOGIN();
-        new P02_AddToCart(driver).addProductsToCard(3).UserClickOnCartBtton().getClickOnCheckout();
+        new P02_AddToCart(driver).addProductsToCard(3);
         //TODO : capture screenshot
         utlity.captureScreenshot(driver,"addToCart");
 

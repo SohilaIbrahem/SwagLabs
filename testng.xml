@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="SwagLabs-Project"  parallel="tests" thread-count="1">
-<!--
-    <parameter name="browser" value=""/>
--->
+
     <suite-files>
         <suite-file path="allTestcasesChrome.xml"/>
-        <!--<suite-file path="allTestcasesFirefox.xml"/>
+       <!-- <suite-file path="allTestcasesFirefox.xml"/>
         <suite-file path="allTestcasesEdge.xml"/>-->
     </suite-files>
 

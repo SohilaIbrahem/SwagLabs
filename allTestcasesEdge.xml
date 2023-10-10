@@ -3,13 +3,13 @@
 <suite name="SwagLabs-Project">
 
     <parameter name="browser" value="edge"/>
+    <listeners>
+        <listener class-name="listener.Listener"/>
+    </listeners>
 
     <test name="Check login page with valid data">
-        <parameter name="browser" value=""/>
         <classes>
-
             <class name="testCases.TC01_LoginTest">
-
                 <methods>
                     <include name="LoginTestWithValidData_P"/>
                 </methods>
@@ -18,11 +18,8 @@
     </test>
 
     <test name="User can add products to shopping cart">
-        <parameter name="browser" value=""/>
         <classes>
-
             <class name="testCases.TC02_AddToCartTest">
-
                 <methods>
                     <include name="addItemsToCart"/>
                 </methods>
@@ -31,11 +28,8 @@
     </test>
 
     <test name="Checkout">
-        <parameter name="browser" value=""/>
         <classes>
-
             <class name="testCases.TC03_CheckoutInformationTest">
-
                 <methods>
                     <include name="checkoutTest"/>
                 </methods>
@@ -44,7 +38,7 @@
     </test>
 
     <test name="Checkout order information">
-        <parameter name="browser" value=""/>
+
         <classes>
             <class name="testCases.TC03_CheckoutInformationTest">
                 <methods>
@@ -55,7 +49,6 @@
     </test>
 
     <test name="Checkout order overview">
-        <parameter name="browser" value=""/>
         <classes>
             <class name="testCases.TC04_CheckoutOrderOverviewTest">
                 <methods>
@@ -66,7 +59,6 @@
     </test>
 
     <test name="Confirmation to create success order">
-        <parameter name="browser" value=""/>
         <classes>
             <class name="testCases.TC05_ConfirmOrderTest">
                 <methods>

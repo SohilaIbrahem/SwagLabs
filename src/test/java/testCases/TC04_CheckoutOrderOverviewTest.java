@@ -20,7 +20,7 @@ public class TC04_CheckoutOrderOverviewTest extends TestBase{
     public void checkOrderOverview() throws InterruptedException {
         new P01_LoginPage(driver).UserAddUSERNAME(username).UserAddPASSWORD(password).UserClickOnLOGIN();
         new P02_AddToCart(driver).addProductsToCard(3).UserClickOnCartBtton().getClickOnCheckout();
-        new P03_CheckOut(driver).UserClickOnContinueButton().UerEnterFirstName("user").
+        new P03_CheckOut(driver).UserClickOnContinueButton().UerEnterFirstName(FIRSTNAME).
                 UerEnterLastName(LASTNAME).UerEnterPostalCode(ZIP).UserClickOnContinueButton();
 
 

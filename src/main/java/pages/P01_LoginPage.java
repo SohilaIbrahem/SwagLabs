@@ -18,6 +18,8 @@ public class P01_LoginPage {
 
     private final By LOGIN = By.id("login-button");
 
+    private final By LoginAssert = By.xpath("//div[@class=\"product_label\"]");
+
     //TODO: add action method
     public P01_LoginPage UserAddUSERNAME(String username) {
         driver.findElement(this.USERNAME).sendKeys(username);
@@ -32,6 +34,11 @@ public class P01_LoginPage {
     public P01_LoginPage UserClickOnLOGIN() {
         driver.findElement(this.LOGIN).click();
         return this;
+    }
+
+    public Boolean LoginAssertion()
+    {
+        return driver.findElement(this.LoginAssert).getText().equals("Products");
     }
 
 

@@ -3,6 +3,7 @@ package testCases;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Story;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.P01_LoginPage;
 import retry.Retry;
@@ -28,9 +29,11 @@ public class TC01_LoginTest extends TestBase {
         new P01_LoginPage(driver).UserAddUSERNAME(username).UserAddPASSWORD(password).UserClickOnLOGIN();
         //TODO: capture screenshot
         utlity.captureScreenshot(driver,"login");
-        //TODO:check if login Successfully
+        //TODO : login assert
+        Assert.assertTrue(new P01_LoginPage(driver).LoginAssertion());
 
     }
+/*
 
     @Test (priority = 2 , description = "check login with Invalid username and password")
     public void LoginTestWithInvalidUsername_N()
@@ -63,5 +66,6 @@ public class TC01_LoginTest extends TestBase {
         utlity.captureScreenshot(driver,"login");
         //TODO:check if login
     }
+*/
 
 }

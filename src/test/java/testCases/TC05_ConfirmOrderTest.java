@@ -22,8 +22,6 @@ public class TC05_ConfirmOrderTest extends TestBase{
         //Checkout order
         new P03_CheckOut(driver).UserClickOnContinueButton().UerEnterFirstName(FIRSTNAME).UerEnterLastName(LASTNAME).
                                  UerEnterPostalCode(POSTALCODE).UserClickOnContinueButton();
-      //  new P04_CheckoutOrderOverview(driver).UserClickOnFinishButton();
-
         new P05_ConfirmOrder(driver).UserclickOnFinishButton();
 
         //TODO : capture screenshot
